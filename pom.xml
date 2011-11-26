@@ -9,9 +9,9 @@
         <version>2</version>
     </parent>
     
-    <groupId>com.toolazydogs.jsonrpc4me</groupId>
+    <groupId>com.toolazydogs.jr4me</groupId>
     <artifactId>api</artifactId>
-    <name>JSON-RPC 4 me :: API</name>
+    <name>JSON-RPC for me :: API</name>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -27,27 +27,11 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-    <dependencies>
-
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>5.14</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>1.8.5</version>
-            <scope>test</scope>
-        </dependency>
-
-    </dependencies>
+    <dependencies/>
 
     <scm>
-        <connection>scm:git:git@github.com:maguro/jsonrpc4me-api.git</connection>
-        <url>scm:git:git@github.com:maguro/jsonrpc4me-api.git</url>
+        <connection>scm:git:git@github.com:maguro/jr4me-api.git</connection>
+        <url>scm:git:git@github.com:maguro/jr4me-api.git</url>
     </scm>
 
 </project>
