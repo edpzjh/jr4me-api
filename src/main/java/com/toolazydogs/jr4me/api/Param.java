@@ -32,6 +32,4 @@ import java.lang.annotation.Target;
 public @interface Param
 {
     String name();
-
-    String codec() default "";
 }
