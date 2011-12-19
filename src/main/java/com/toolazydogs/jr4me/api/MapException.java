@@ -1,5 +1,4 @@
 /**
- *
  * Copyright 2011 (C) The original author or authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,11 +26,18 @@ import java.lang.annotation.Target;
  *
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.METHOD})
+@Target({ElementType.TYPE})
 @Documented
-public @interface Method
+public @interface MapException
 {
-    final String USE_METHOD_NAME = "(The default is to use the actual method name)";
+    public Map[] value() default {};
 
-    String name() default USE_METHOD_NAME;
+    public @interface Map
+    {
+        public Class<?> exception();
+
+        public int code();
+
+        public String message();
+    }
 }

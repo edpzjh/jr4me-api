@@ -1,5 +1,4 @@
 /**
- *
  * Copyright 2011 (C) The original author or authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,11 +26,18 @@ import java.lang.annotation.Target;
  *
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.METHOD})
+@Target({ElementType.TYPE})
 @Documented
-public @interface Method
+public @interface Codecs
 {
-    final String USE_METHOD_NAME = "(The default is to use the actual method name)";
+    public Codec[] value() default {};
 
-    String name() default USE_METHOD_NAME;
+    public @interface Codec
+    {
+        public Class<?> clazz();
+
+        public Class<?> serializer();
+
+        public Class<?> deserializer();
+    }
 }
